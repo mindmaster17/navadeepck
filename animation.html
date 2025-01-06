@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D ASCII Cube Animation</title>
+    <style>
+        body {
+            background-color: #0d1117;
+            color: #c9d1d9;
+            font-family: 'Courier New', monospace;
+            text-align: center;
+            padding: 20px;
+        }
+        pre {
+            font-size: 20px;
+            white-space: pre;
+        }
+        .ascii-art {
+            font-family: 'Courier New', monospace;
+            white-space: pre;
+            color: #8b949e;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+    <h1>3D ASCII Cube Animation</h1>
+    <div class="ascii-art">
+        <pre id="ascii-cube">
+        
+        </pre>
+    </div>
+
+    <script>
+        let cubeFrames = [
+            `
+              +------+
+             /      /|
+            /      / |
+           +------+/  |
+           |      |   +
+           |      |  /
+           |      | /
+           +------+/`,
+            `
+              +------+
+             /      /|
+            /      / |
+           +------+/  |
+           |      |   +
+           |      |  /
+           |      | /
+           +--+---+/`,
+            `
+              +------+
+             /      /|
+            /      / |
+           +------+/  |
+           |      |   +
+           |      |  /
+           |      | /
+           +--+---+/`,
+            `
+              +------+
+             /      /|
+            /      / |
+           +--+---+/  |
+           |      |   +
+           |      |  /
+           |      | /
+           +--+---+/`,
+            `
+              +------+
+             /      /|
+            /      / |
+           +------+/  |
+           |      |   +
+           |      |  /
+           |      | /
+           +------+/`
+        ];
+        
+        let frameIndex = 0;
+        
+        function rotateCube() {
+            document.getElementById('ascii-cube').textContent = cubeFrames[frameIndex];
+            frameIndex = (frameIndex + 1) % cubeFrames.length;
+        }
+        
+        setInterval(rotateCube, 500);
+    </script>
+</body>
+</html>
