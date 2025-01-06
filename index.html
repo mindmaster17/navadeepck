@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Fonts -->
+    <link href="css/neardwebfont.css" rel="stylesheet">
+    <!-- Elements -->
+    <link href="css/styles.css" rel="stylesheet">
+
+
+    <title>Navadeep's Portfolio</title>
+    <style>
+
+        @font-face {
+        font-family: 'Ubuntu Mono Nerd Font';
+        src: url('fonts/UbuntuMonoNerdFont-Regular.ttf') format('truetype');
+        font-weight: normal;
+        font-style: normal;
+        }
+
+
+        body {
+            background-color: #0d1117;
+            color: #c9d1d9;
+            font-family: 'Ubuntu Mono Nerd Font', monospace;
+            line-height: 1.6;
+            padding: 20px;
+            max-width: 1000px;
+            margin: 0 auto;
+            text-align: left;
+            word-wrap: break-word;
+            font-size: 18px;
+        }
+        a {
+            color: #58a6ff;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        .ascii-art {
+            font-family: 'Ubuntu Mono Nerd Font', monospace;
+            white-space: pre-wrap;
+            color: #8b949e;
+        }
+        .section {
+            margin-bottom: 30px;
+        }
+        .section h1 {
+            color: #f0883e;
+            border-bottom: 2px solid #30363d;
+            padding-bottom: 5px;
+            margin-bottom: 15px;
+        }
+        .section ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        .section ul li::before {
+            content: "🔧 ";
+        }
+        .footer {
+            border-top: 1px solid #30363d;
+            padding-top: 20px;
+            text-align: center;
+            color: #8b949e;
+        }
+
+
+        .nf-md-email:before {
+        margin: 10px;
+        }
+        .nf-dev-linkedin:before {
+        margin: 10px;
+        }
+        .nf-cod-github::before {
+            margin: 10px;
+        }
+        
+
+    </style>
+</head>
+<body>
+    <div class="ascii-art">
+        <!-- ASCII Art Header -->
+        <pre>
+███╗   ██╗ █████╗ ██╗   ██╗ █████╗ ██████╗ ███████╗███████╗██████╗      ██████╗    ██╗  ██╗
+████╗  ██║██╔══██╗██║   ██║██╔══██╗██╔══██╗██╔════╝██╔════╝██╔══██╗    ██╔════╝    ██║ ██╔╝
+██╔██╗ ██║███████║██║   ██║███████║██║  ██║█████╗  █████╗  ██████╔╝    ██║         █████╔╝ 
+██║╚██╗██║██╔══██║╚██╗ ██╔╝██╔══██║██║  ██║██╔══╝  ██╔══╝  ██╔═══╝     ██║         ██╔═██╗ 
+██║ ╚████║██║  ██║ ╚████╔╝ ██║  ██║██████╔╝███████╗███████╗██║         ╚██████╗    ██║  ██╗
+╚═╝  ╚═══╝╚═╝  ╚═╝  ╚═══╝  ╚═╝  ╚═╝╚═════╝ ╚══════╝╚══════╝╚═╝          ╚═════╝    ╚═╝  ╚═╝
+        </pre>
+    </div>
+
+    <div class="section">
+        <h1>About Me</h1>
+        <p>Hello! I'm Navadeep, a Mechanical Engineering student at GEC Thrissur with a passion for robotics, CAD design, and sustainable engineering. I enjoy turning ideas into reality through innovative solutions.</p>
+    </div>
+
+    <div class="section">
+        <h1>Skills</h1>
+        <ul>
+            <li>🔧 CAD Software: SolidWorks, Siemens NX, AutoCAD</li>
+            <li>🤖 Robotics: ROS 2, Arduino, ESP8266</li>
+            <li>⚙️ Mechanical Design: GD&T, Material Selection, Prototyping</li>
+            <li>🌱 Sustainable Engineering & Electric Vehicles</li>
+            <li>💻 Programming: Python, MATLAB, C, HTML</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h1>Projects</h1>
+        <ul>
+            <li><strong>Interactive PACE Data Visualization Web App</strong> - NASA Space Apps Hackathon</li>
+            <li><strong>Waste Management</strong> - Designed for Ideator</li>
+            <li><strong>Round Thumb Dial Potentiometer CAD</strong> - Published on GrabCAD</li>
+
+
+              ---------------------------------------
+
+              <div class="section">
+                <h1>Projects</h1>
+                <div class="card-container">
+                    <!-- Card 1 -->
+                    <div class="card">
+                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M20 5H4V19L13.2923 9.70649C13.6828 9.31595 14.3159 9.31591 14.7065 9.70641L20 15.0104V5ZM2 3.9934C2 3.44476 2.45531 3 2.9918 3H21.0082C21.556 3 22 3.44495 22 3.9934V20.0066C22 20.5552 21.5447 21 21.0082 21H2.9918C2.44405 21 2 20.5551 2 20.0066V3.9934ZM8 11C6.89543 11 6 10.1046 6 9C6 7.89543 6.89543 7 8 7C9.10457 7 10 7.89543 10 9C10 10.1046 9.10457 11 8 11Z"></path>
+                        </svg>
+                        <div class="card__content">
+                            <p class="card__title">Project Name</p>
+                            <p class="card__description">Description for project 1 goes here.</p>
+                            <button class="card__button">Read More</button>
+                        </div>
+                    </div>
+            
+                    <!-- Card 2 -->
+                    <div class="card">
+                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M20 5H4V19L13.2923 9.70649C13.6828 9.31595 14.3159 9.31591 14.7065 9.70641L20 15.0104V5ZM2 3.9934C2 3.44476 2.45531 3 2.9918 3H21.0082C21.556 3 22 3.44495 22 3.9934V20.0066C22 20.5552 21.5447 21 21.0082 21H2.9918C2.44405 21 2 20.5551 2 20.0066V3.9934ZM8 11C6.89543 11 6 10.1046 6 9C6 7.89543 6.89543 7 8 7C9.10457 7 10 7.89543 10 9C10 10.1046 9.10457 11 8 11Z"></path>
+                        </svg>
+                        <div class="card__content">
+                            <p class="card__title">Project Name</p>
+                            <p class="card__description">Description for project 2 goes here.</p>
+                            <button class="card__button">Read More</button>
+                        </div>
+                    </div>
+
+                    <!-- Card 3 -->
+                    <div class="card">
+                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M20 5H4V19L13.2923 9.70649C13.6828 9.31595 14.3159 9.31591 14.7065 9.70641L20 15.0104V5ZM2 3.9934C2 3.44476 2.45531 3 2.9918 3H21.0082C21.556 3 22 3.44495 22 3.9934V20.0066C22 20.5552 21.5447 21 21.0082 21H2.9918C2.44405 21 2 20.5551 2 20.0066V3.9934ZM8 11C6.89543 11 6 10.1046 6 9C6 7.89543 6.89543 7 8 7C9.10457 7 10 7.89543 10 9C10 10.1046 9.10457 11 8 11Z"></path>
+                        </svg>
+                        <div class="card__content">
+                            <p class="card__title">Project Name</p>
+                            <p class="card__description">Description for project 2 goes here.</p>
+                            <button class="card__button">Read More</button>
+                        </div>
+                    </div>
+            
+                    <!-- Card 4 -->
+                    <div class="card">
+                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M20 5H4V19L13.2923 9.70649C13.6828 9.31595 14.3159 9.31591 14.7065 9.70641L20 15.0104V5ZM2 3.9934C2 3.44476 2.45531 3 2.9918 3H21.0082C21.556 3 22 3.44495 22 3.9934V20.0066C22 20.5552 21.5447 21 21.0082 21H2.9918C2.44405 21 2 20.5551 2 20.0066V3.9934ZM8 11C6.89543 11 6 10.1046 6 9C6 7.89543 6.89543 7 8 7C9.10457 7 10 7.89543 10 9C10 10.1046 9.10457 11 8 11Z"></path>
+                        </svg>
+                        <div class="card__content">
+                            <p class="card__title">Project Name</p>
+                            <p class="card__description">Description for project 3 goes here.</p>
+                            <button class="card__button">Read More</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+
+        </ul>
+    </div>
+
+    <div class="section" >
+<div style="
+margin-top: 100px;
+">
+        <h1>Contact</h1>
+        <p class="nf-md-email" > Email: <a href="mailto:navadeepklr@gmail.com">navadeepklr@gmail.com</a></p>
+        <p class="nf-dev-linkedin"> LinkedIn: <a href="https://www.linkedin.com/in/navadeep">linkedin.com/in/navadeep-c-k-24798b2b8</a></p>
+        <p class="nf-cod-github"> GitHub: <a href="https://github.com/mindmaster17">github.com/mindmaster17</a></p>
+</div>        
+
+    </div>
+
+    <div class="ascii-art">
+        <!-- ASCII Footer -->
+        <pre>
+        ╔════════════════════════════════════════════════════════════════╗
+        ║ Thank you for visiting! Let's build something incredible! 🤖 🔧 ║
+        ╚════════════════════════════════════════════════════════════════╝
+        </pre>
+    </div>
+
+    <div class="footer">
+        <p>&copy; 2025 Navadeep. Built with love and gears.
+            Lorem ipsum dolor sit amet, quo tacimates dissentiet no at 🛠️</p>
+    </div>
+</body>
+</html>
