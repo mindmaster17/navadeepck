@@ -413,12 +413,12 @@ pre {
 
 @media (max-width: 480px) {
   pre {
-    font-size: 8px;
+    font-size: 6px;
   }
 }
 @media (max-width: 360px) {
   pre {
-    font-size: 7px;
+    font-size: 4px;
   }
 }
 
