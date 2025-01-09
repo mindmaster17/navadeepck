@@ -8,6 +8,14 @@
     <link href="css/neardwebfont.css" rel="stylesheet">
     <!-- Elements -->
     <link href="css/styles.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+
+
+
+
+
 
 
     <title>Navadeep's Portfolio</title>
@@ -20,15 +28,18 @@
         font-style: normal;
         }
 
+        html {
+    scroll-behavior: smooth;
+            }
 
         body {
             background-color: #0d1117;
             color: #c9d1d9;
             font-family: 'Ubuntu Mono Nerd Font', monospace;
             line-height: 1.6;
-            padding: 20px;
-            max-width: 1000px;
-            margin: 0 auto;
+            padding: 0px;
+            width: auto;
+            margin: 0;
             text-align: left;
             word-wrap: break-word;
             font-size: 18px;
@@ -44,23 +55,31 @@
             font-family: 'Ubuntu Mono Nerd Font', monospace;
             white-space: pre-wrap;
             color: #8b949e;
+            text-align: center;
         }
         .section {
-            margin-bottom: 30px;
+            width: 70%;
+            margin: 0 auto 30px;
+            text-align: left;
         }
+
         .section h1 {
             color: #f0883e;
             border-bottom: 2px solid #30363d;
             padding-bottom: 5px;
             margin-bottom: 15px;
         }
+
         .section ul {
             list-style-type: none;
             padding: 0;
         }
+
         .section ul li::before {
             content: "🔧 ";
         }
+
+
         .footer {
             border-top: 1px solid #30363d;
             padding-top: 20px;
@@ -78,11 +97,42 @@
         .nf-cod-github::before {
             margin: 10px;
         }
+
+        
+
         
 
     </style>
 </head>
-<body>
+
+
+<div class="">
+    <header class="header">
+        <div class="logo">
+          <a href="#">Navadeep</a>
+        </div>
+        <nav class="nav-links">
+          <a href="#about">About</a>
+          <a href="#projects">Projects</a>
+          <a href="#skills">Skills</a>
+          <a href="#contact">Contact</a>
+        </nav>
+        <div class="hamburger" id="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </header>      
+    </div>
+
+
+    <div class="parallax-header">
+        <h1>Mechanical Engineering Portfolio</h1>
+        <p>Explore the world of engineering and innovation</p>
+    </div>
+
+
+<div class="parallax-container">
     <div class="ascii-art">
         <!-- ASCII Art Header -->
         <pre>
@@ -94,10 +144,17 @@
 ╚═╝  ╚═══╝╚═╝  ╚═╝  ╚═══╝  ╚═╝  ╚═╝╚═════╝ ╚══════╝╚══════╝╚═╝          ╚═════╝    ╚═╝  ╚═╝
         </pre>
     </div>
+</div>
+
+<body>
 
     <div class="section">
         <h1>About Me</h1>
-        <p>Hello! I'm Navadeep, a Mechanical Engineering student at GEC Thrissur with a passion for robotics, CAD design, and sustainable engineering. I enjoy turning ideas into reality through innovative solutions.</p>
+        <p>Hello! I'm Navadeep, a Mechanical Engineering student at GEC Thrissur with a passion for robotics, CAD design, and sustainable engineering. I enjoy turning ideas into reality through innovative solutions.With hands-on experience in robotics projects, including building quadropod robots and Antweight Robowar bots, I focus on applying engineering principles to solve real-world challenges.
+
+            I’m also deeply interested in AI applications in the mechanical domain and have participated in global hackathons like NASA Space Apps.
+            
+            </p>
     </div>
 
     <div class="section">
@@ -107,7 +164,7 @@
             <li>🤖 Robotics: ROS 2, Arduino, ESP8266</li>
             <li>⚙️ Mechanical Design: GD&T, Material Selection, Prototyping</li>
             <li>🌱 Sustainable Engineering & Electric Vehicles</li>
-            <li>💻 Programming: Python, MATLAB, C, HTML</li>
+            <li>💻 Programming: Python, MATLAB, C, HTML , CSS</li>
         </ul>
     </div>
 
@@ -121,7 +178,7 @@
 
               ---------------------------------------
 
-              <div class="section">
+              <div class="carding">
                 <h1>Projects</h1>
                 <div class="card-container">
                     <!-- Card 1 -->
@@ -137,7 +194,8 @@
                     </div>
             
                     <!-- Card 2 -->
-                    <div class="card">
+                    <div href="index1.html" class="card">
+                        
                         <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                             <path d="M20 5H4V19L13.2923 9.70649C13.6828 9.31595 14.3159 9.31591 14.7065 9.70641L20 15.0104V5ZM2 3.9934C2 3.44476 2.45531 3 2.9918 3H21.0082C21.556 3 22 3.44495 22 3.9934V20.0066C22 20.5552 21.5447 21 21.0082 21H2.9918C2.44405 21 2 20.5551 2 20.0066V3.9934ZM8 11C6.89543 11 6 10.1046 6 9C6 7.89543 6.89543 7 8 7C9.10457 7 10 7.89543 10 9C10 10.1046 9.10457 11 8 11Z"></path>
                         </svg>
@@ -192,16 +250,15 @@ margin-top: 100px;
 
     <div class="ascii-art">
         <!-- ASCII Footer -->
-        <pre>
-        ╔════════════════════════════════════════════════════════════════╗
-        ║ Thank you for visiting! Let's build something incredible! 🤖 🔧 ║
-        ╚════════════════════════════════════════════════════════════════╝
-        </pre>
+        
+
+ <p>Thank you for visiting! Let's build something incredible! 🤖 🔧</p>
+
+       
     </div>
 
     <div class="footer">
-        <p>&copy; 2025 Navadeep. Built with love and gears.
-            Lorem ipsum dolor sit amet, quo tacimates dissentiet no at 🛠️</p>
+        <p>&copy; 2025 Navadeep. Built with love and gears.🛠️</p>
     </div>
 </body>
 </html>
