@@ -7,7 +7,7 @@
   border-radius: 12px; /* Slightly increased border radius */
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   overflow: hidden;
   perspective: 1000px;
   box-shadow: 0 0 0 6px #51505080; /* Adjusted box shadow */
@@ -85,14 +85,14 @@
   display: flex;
   flex-wrap: wrap;
   gap: 54px; /* Increased gap */
-  justify-content: space-between;
+  justify-content: space-around;
 }
 
 .card {
   background-color: #161b22;
   border: 1px solid #30363d;
   border-radius: 12px; /* Increased border radius */
-  padding: 24px; /* Adjusted padding */
+  padding: 34px; /* Adjusted padding */
   width: calc(32% - 24px); /* Adjusted width calculation */
   color: #c9d1d9;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
@@ -142,3 +142,283 @@
       width: 100%; /* For mobile devices */
   }
 }
+
+.header-image {
+  all: unset;
+  position: relative;
+  width: 1500px;
+  height: 50vh;  /* 50% of the viewport height */
+  overflow: hidden;
+}
+
+.header-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
+/*PARALLAX EFFECT */
+
+/* Parallax Header Section */
+.parallax-header {
+  position: relative;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('./header.png');  /* Replace with your image path */
+  height: 52vh;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: rgb(255, 255, 255);
+  text-shadow: 1px 1px #999, 2px 2px #666, 3px 3px #333;
+
+  text-align: center;
+}
+
+.parallax-header h1 {
+  font-size: 3rem;
+  margin: 0;
+}
+
+.parallax-header p {
+  font-size: 1.5rem;
+  margin: 10px 0;
+}
+
+
+/*Ascii art container*/
+
+.ascii-art-container {
+  position: relative;
+  background-image: url('./header.png');  /* Replace with your image path */
+  background-size: cover;
+  background-position: center;
+  padding: 20px;
+  color: rgb(20, 19, 37);
+  font-family: monospace;
+  font-size: calc();
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.8);  /* Optional: Makes text more readable */
+}
+
+/* ASCII Art Content */
+.ascii-art-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-family: monospace;
+  font-size: 20px;
+  text-align: center;
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.8);  /* Optional: Makes text more readable */
+}
+
+.parallax-container {
+  position: relative;
+  height: 400px;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('./header.png');
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+}
+
+
+/* Text wrapping mechanism*/
+
+/* Section Styling */
+.wrap-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;  /* Full-screen height for centering */
+  text-align: left;
+}
+
+.wrap-section h2 {
+  font-size: 28px;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.wrap-section p {
+  font-size: 18px;
+  line-height: 1.6;
+  color: #555;
+}
+
+.wrap-section div {
+  max-width: 600px;  /* Adjust as needed */
+  padding: 20px;
+}
+
+
+/*Header Menu*/
+
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Header Styling */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 15px 30px;
+  background-color: rgba(13, 17, 23, 0.501); /* Semi-transparent background */
+  backdrop-filter: blur(10px);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 1000;
+  transition: all 0.3s ease;
+}
+
+/* Logo Styling */
+.logo a {
+  font-size: 24px;
+  color: #f0883e;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* Navigation Links */
+.nav-links {
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links a {
+  color: #c9d1d9;
+  text-decoration: none;
+  font-size: 18px;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #f0883e;
+}
+
+/* Hamburger Menu */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+}
+
+.hamburger span {
+  width: 25px;
+  height: 3px;
+  background-color: #c9d1d9;
+  border-radius: 3px;
+  transition: all 0.3s ease;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background-color: #0d1117;
+    position: fixed;
+    top: 60px;
+    right: 0;
+    width: 200px;
+    padding: 20px;
+    box-shadow: -2px 0 10px rgba(0, 0, 0, 0.5);
+    border-radius: 8px;
+  }
+
+  .nav-links a {
+    margin-bottom: 10px;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+}
+/* Menu Styling */
+header {
+  position: relative;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.034), rgba(0, 0, 0, 0.044)), url('./header.png');  /* Replace with your image path */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: rgb(255, 255, 255);
+
+  text-align: center;
+}
+
+header a {
+  font-size: 18px;
+  color: #c9d1d9;
+  text-decoration: none; /* Remove underline */
+  margin: 0 15px;
+  text-transform: uppercase;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+header a:hover {
+  transform: scale(1.1); /* Zoom effect */
+  color: #f0883e; /* Change text color on hover */
+  text-decoration: none;
+}
+
+.ascii-art-content {
+  font-size: 28px; /* For larger screens */
+}
+
+@media (max-width: 768px) {
+  .ascii-art-content {
+      font-size: 10px; /* For tablets */
+  }
+}
+
+@media (max-width: 480px) {
+  .ascii-art-content {
+      font-size: 5px; /* For mobile devices */
+  }
+}
+
+
+/* ASCII Scaling code */
+
+pre {
+  font-family: monospace;
+  font-size: 18px;
+  white-space: pre-wrap;
+  max-width: 100%;
+  overflow-x: auto;
+}
+
+/* Scale down the font size on smaller screens */
+@media (max-width: 768px) {
+  pre {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  pre {
+    font-size: 8px;
+  }
+}
+@media (max-width: 390px) {
+  pre {
+    font-size: 7px;
+  }
+}
+
