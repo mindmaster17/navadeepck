@@ -1,8 +1,8 @@
 /* From Uiverse.io by D3OXY */ 
 .card {
   position: relative;
-  width: 600px; /* Increased width */
-  aspect-ratio: 16/9;
+  width: 620px; /* Increased width */
+  aspect-ratio: 4/3;
   background-color: #0d1117;
   border-radius: 12px; /* Slightly increased border radius */
   display: flex;
@@ -37,7 +37,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  padding: 25px; /* Increased padding */
+  padding: 5px; /* Increased padding */
   box-sizing: border-box;
   background-color: #12171fc1;
   transform: rotateX(-90deg);
@@ -92,7 +92,7 @@
   background-color: #161b22;
   border: 1px solid #30363d;
   border-radius: 12px; /* Increased border radius */
-  padding: 34px; /* Adjusted padding */
+  padding: 1px; /* Adjusted padding */
   width: calc(32% - 24px); /* Adjusted width calculation */
   color: #c9d1d9;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
@@ -113,6 +113,10 @@
   margin: 12px 0;
 }
 
+/*Use Card as a button*/
+
+
+
 .card__button {
   background-color: #238636;
   color: #ffffff;
@@ -131,14 +135,36 @@
   width: calc(33.33% - 5px); /* For larger screens */
 }
 
+@media (max-width: 1000px) {
+  .card {
+      width: calc(80% - 20px); /* For tablets */
+  }
+}
+
 @media (max-width: 768px) {
   .card {
-      width: calc(50% - 20px); /* For tablets */
+      width: calc(70% - 20px); /* For tablets */
   }
 }
 
 @media (max-width: 480px) {
   .card {
+      width: 100%; /* For mobile devices */
+  }
+}
+
+.card__content {
+  width: calc(100%); /* For larger screens */
+}
+
+@media (max-width: 768px) {
+  .card__content {
+      width: calc(100%); /* For tablets */
+  }
+}
+
+@media (max-width: 480px) {
+  .card__content {
       width: 100%; /* For mobile devices */
   }
 }
@@ -164,17 +190,24 @@
 .parallax-header {
   position: relative;
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('./header.png');  /* Replace with your image path */
-  height: 52vh;
+  height: 40vh;
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  align-items: top;
+  top: 0px;
+  justify-content: space-between;
   color: rgb(255, 255, 255);
-  text-shadow: 1px 1px #999, 2px 2px #666, 3px 3px #333;
+  text-transform: uppercase;
+  z-index: 1000;
+  transition: all 0.3s ease;
+
+  padding-top: 25px;
+  padding-left: 25px;
+  padding-right: 25px;
+  padding-bottom: 25px;
 
   text-align: center;
 }
@@ -267,13 +300,16 @@
 
 /* Header Styling */
 .header {
-  position: fixed;
-  top: 0;
-  left: 0;
+  position: absolute;
+  top: 0px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 20px;
   width: 100%;
   padding: 15px 30px;
   background-color: rgba(13, 17, 23, 0.501); /* Semi-transparent background */
-  backdrop-filter: blur(10px);
+  backdrop-filter: blur(3px);
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -311,12 +347,12 @@
   display: none;
   flex-direction: column;
   cursor: pointer;
-  gap: 5px;
+  gap: 3px;
 }
 
 .hamburger span {
   width: 25px;
-  height: 3px;
+  height: 2px;
   background-color: #c9d1d9;
   border-radius: 3px;
   transition: all 0.3s ease;
@@ -352,7 +388,7 @@
 /* Menu Styling */
 header {
   position: relative;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.034), rgba(0, 0, 0, 0.044)), url('./header.png');  /* Replace with your image path */
+/* Replace with your image path */
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
@@ -405,16 +441,6 @@ pre {
 }
 
 /* Scale down the font size on smaller screens */
-
-pre {
-  font-family: monospace;
-  font-size: 18px;
-  white-space: pre-wrap;
-  max-width: 100%;
-  overflow-x: auto;
-}
-
-/* Scale down the font size on smaller screens */
 @media (max-width: 900px) {
   pre {
     font-size: 14px;
@@ -437,6 +463,11 @@ pre {
     font-size: 7px;
   }
 }
+@media (max-width: 415px) {
+  pre {
+    font-size: 6px;
+  }
+}
 @media (max-width: 360px) {
   pre {
     font-size: 5px;
@@ -449,3 +480,54 @@ pre {
   }
 }
 
+
+/*Parallax header meneu*/
+
+/* Menu Styling */
+
+
+.parallax-header a {
+  font-size: 24px;
+  color: #c9d1d9;
+  text-decoration: none; /* Remove underline */
+  margin: 0 15px;
+  text-transform: uppercase;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.parallax-header a:hover {
+  transform: scale(1.1); /* Zoom effect */
+  color: #f0883e; /* Change text color on hover */
+  text-decoration: none;
+}
+
+
+/*Tagline Styling*/
+
+
+
+.tagline {
+  all: unset;
+  text-align: center;
+
+  position: relative;
+
+  width: 100%;
+  padding: 15px 30px;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('./header.png');
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: all 0.3s ease;
+}
+.tagline-container {
+  position: relative;
+  height: 100px;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('./header.png');
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  align-content: center;
+  text-align: center;
+  
+}
