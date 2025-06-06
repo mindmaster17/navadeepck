@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Fonts -->
+    <link href="css/neardwebfont.css" rel="stylesheet">
+    <!-- Elements -->
+    <link href="css/styles.css" rel="stylesheet">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/egg.js/1.0/egg.min.js"></script>
+
+    
+
+
+    <title>Navadeep's Portfolio</title>
+    <style>
+
+        @font-face {
+        font-family: 'Ubuntu Mono Nerd Font';
+        src: url('fonts/UbuntuMonoNerdFont-Regular.ttf') format('truetype');
+        font-weight: normal;
+        font-style: normal;
+        }
+
+        html {
+    scroll-behavior: smooth;
+            }
+
+        body {
+            background-color: #1b1d1f;
+            /*background-color: #171b20;*/
+            color: #c9d1d9;
+            /*color: #c9d1d9;*/
+            font-family: 'Ubuntu Mono Nerd Font', monospace;
+            line-height: 1.6;
+            padding: 0px;
+            width: auto;
+            margin: 0;
+            text-align: left;
+            word-wrap: break-word;
+            font-size: 20px;
+        }
+        a {
+            color: #58a6ff;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        .ascii-art {
+            font-family: 'Ubuntu Mono Nerd Font', monospace;
+            white-space: pre-wrap;
+            color: #8b949e;
+            text-align: center;
+        }
+        .section {
+            width: 70%;
+            margin: 0 auto 30px;
+            text-align: left;
+            text-spacing-trim: 23px;
+        }
+
+        @media (max-width: 1000px) {
+            .section {
+                width: calc(92%); /* For smaller devices */
+            }
+          }
+
+
+        .section h1 {
+            color: #f0883e;
+            border-bottom: 2px solid #30363d;
+            padding-bottom: 5px;
+            margin-bottom: 15px;
+        }
+
+        .section ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .section ul li::before {
+            content: "-> ";
+        }
+
+
+        .footer {
+            border-top: 1px solid #30363d;
+            padding-top: 20px;
+            text-align: center;
+            color: #8b949e;
+        }
+
+
+        .nf-md-email:before {
+        margin: 10px;
+        }
+        .nf-dev-linkedin:before {
+        margin: 10px;
+        }
+        .nf-cod-github::before {
+            margin: 10px;
+        }
+
+        #easter-egg-gif {
+            display: none; /* Hide the GIF initially */
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        /* Default cursor */
+body {
+    cursor: url('./css/cursor/d1.png'), auto;
+}
+
+/* Custom cursor for specific elements */
+.button {
+    cursor: url('./css/cursor/c1.png'), pointer;
+}
+
+.link {
+    cursor: url('./css/cursor/c1.png'), pointer;
+}
+
+.text-area {
+    cursor: url('./css/cursor/c1.png'), text;
+}
+
+    </style>
+</head>
+
+
+
+
+<div class="parallax-header">
+    <div class="logo">
+        <img class="logo-image" src="./images/logo.png" alt="logo1">
+        <a href="./images/logo.png" class="logo"> </a>
+    </div>
+
+    <div>
+    <!-- Navigation links -->
+    <nav class="nav-links" id="navLinks">
+        <a style="color: #f0883e;"class="logon" href="#about">Home</a>
+        <a href="#projects">Resume</a>
+        <a href="#skills">Projects</a>
+        <a href="#contact">Contact</a>
+    </nav>
+    </div>
+    <!-- Hamburger menu icon -->
+    <div class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+
+</div>
+
+
+
+
+
+    <div class="tagline-container">
+        <h1> </h1>
+        <div>
+            <h1 style="color: #f0883e;">
+</h1>
+            <p style="text-align: center;"></p>
+        </div>
+    <a href="index.html">
+        <img id="egggif" src="./images/gif.gif" style="display:none; width:300px; height:auto;">
+    </a>
+        <p> </p>
+    </div>
+    
+    
+
+
+
+<body>
+
+    <div class="section">
+                <div class="badge">
+                    <img src="https://img.shields.io/badge/%F0%9F%92%A1Ideator%20gect-f3f0e8?style=for-the-badge" alt="Ideator Badge">
+                </div>
+                <h1><strong>SuperTalker: Affordable Assistive Communication Device</strong></h1>
+                <div class="image-container">
+                    <img src="https://via.placeholder.com/800x400" alt="SuperTalker Device Prototype">
+                </div>
+                <p>This project is an initiative by the <strong>GEC Thrissur Ideator Student Team</strong> to design a <strong>low-cost assistive speech device</strong> for the <strong>National Institute of Physical Medicine and Rehabilitation (NIPMER)</strong>. Inspired by the existing SuperTalker FeatherTouch device, our aim is to create an affordable alternative that promotes communication for individuals with speech disabilities.</p>
+                
+                <h2>Project Overview</h2>
+                <p>The SuperTalker device provides a customizable interface for recording and playing back audio messages. It uses <strong>capacitive touch switches</strong> for user input, making it accessible for individuals with limited dexterity. Key features include:</p>
+                <ul>
+                    <li><strong>Customizable message grids</strong>: Supports multiple messages with symbol overlays for visual assistance.</li>
+                    <li><strong>Feather touch interface</strong>: A modern, durable, and easy-to-use input method.</li>
+                    <li><strong>APR33A3 audio playback IC</strong>: Enables high-quality, standalone audio storage and playback.</li>
+                    <li><strong>Durable and portable design</strong>: Lightweight and robust, suitable for everyday use.</li>
+                </ul>
+                <div class="image-container">
+                    <img src="images/" alt=" Touch Interface">
+                </div>
+                
+                <h2>Key Features</h2>
+                <ul>
+                    <li><strong>Low Cost</strong>: Designed with affordability in mind to increase accessibility.</li>
+                    <li><strong>Customizable Messages</strong>: Record and store personalized audio messages for various use cases.</li>
+                    <li><strong>FeatherTouch Input</strong>: Reed switchesreplace traditional buttons for enhanced usability.</li>
+                    <li><strong>User-Friendly Design</strong>: Simple overlays and interfaces ensure ease of use for all age groups.</li>
+                </ul>
+                
+                <h2>Technology Stack</h2>
+                <h3>Hardware</h3>
+                <ul>
+                    <li>APR33A3 audio IC</li>
+                    <li>Reed switches(e.g., TTP223)</li>
+                    <li>Rechargeable Li-ion battery</li>
+                </ul>
+                <h3>Software</h3>
+                <ul>
+                    <li>Firmware for interfacing touch inputs with message triggers</li>
+                </ul>
+                <h3>Enclosure</h3>
+                <ul>
+                    <li>Custom 3D-printed case for durability and aesthetics</li>
+                </ul>
+                <div class="image-container">
+                    <img src="images/" alt="3D Printed Enclosure Design">
+                </div>
+                
+                <h2>Why This Project Matters</h2>
+                <p>Communication is a basic human need, yet many assistive devices are prohibitively expensive. This project aims to bridge that gap by providing an affordable, high-quality alternative that empowers individuals with speech disabilities to express themselves effectively.</p>
+                
+                <h2>Get Involved</h2>
+                <p>We welcome contributions to improve this project! Whether you're interested in hardware design, software development, or user experience, join us in making a difference.</p>
+                
+                <h3>Contact Us</h3>
+                <p><strong>Email</strong>: <a href="mailto:navadeepck@gmail.com">navadeepck@gmail.com</a></p>
+                <p><strong>GitHub</strong>: <a href="https://github.com/mindmaster17" target="_blank">mindmaster17</a></p>
+                
+                <p><strong>Let’s work together to build a world where everyone can communicate freely! 💡</strong></p>
+        
+
+    </div>
+
+
+<div class="footer">
+    <p style="
+    border-bottom-width: 20px;
+    padding-bottom: 20px;
+">© 2025 Navadeep. Built with love and gears.🛠️</p>
+ </div >
+
+ <script>
+    // Hamburger menu functionality
+    const hamburger = document.getElementById('hamburger');
+    const navLinks = document.getElementById('navLinks');
+  
+    hamburger.addEventListener('click', () => {
+        navLinks.classList.toggle('active');
+        hamburger.classList.toggle('open');
+    });
+
+      // Easter egg functionality using Egg.js
+      var egg = new Egg("up,up,down,down,left,right,left,right,b,a", function() {
+  jQuery('#egggif').fadeIn(500, function() {
+    window.setTimeout(function() { jQuery('#egggif').hide(); }, 5000);
+  });
+}).listen();
+</script>
+
+</body>
+</html>
+
+

@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Fonts -->
+    <link href="css/neardwebfont.css" rel="stylesheet">
+    <!-- Elements -->
+    <link href="css/styles.css" rel="stylesheet">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/egg.js/1.0/egg.min.js"></script>
+
+    
+
+
+    <title>Navadeep's Portfolio</title>
+    <style>
+
+        @font-face {
+        font-family: 'Ubuntu Mono Nerd Font';
+        src: url('fonts/UbuntuMonoNerdFont-Regular.ttf') format('truetype');
+        font-weight: normal;
+        font-style: normal;
+        }
+
+        html {
+    scroll-behavior: smooth;
+            }
+
+        body {
+            background-color: #1b1d1f;
+            /*background-color: #171b20;*/
+            color: #c9d1d9;
+            /*color: #c9d1d9;*/
+            font-family: 'Ubuntu Mono Nerd Font', monospace;
+            line-height: 1.6;
+            padding: 0px;
+            width: auto;
+            margin: 0;
+            text-align: left;
+            word-wrap: break-word;
+            font-size: 20px;
+        }
+        a {
+            color: #58a6ff;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        .ascii-art {
+            font-family: 'Ubuntu Mono Nerd Font', monospace;
+            white-space: pre-wrap;
+            color: #8b949e;
+            text-align: center;
+        }
+        .section {
+            width: 70%;
+            margin: 0 auto 30px;
+            text-align: left;
+            text-spacing-trim: 23px;
+        }
+
+        @media (max-width: 1000px) {
+            .section {
+                width: calc(92%); /* For smaller devices */
+            }
+          }
+
+
+        .section h1 {
+            color: #f0883e;
+            border-bottom: 2px solid #30363d;
+            padding-bottom: 5px;
+            margin-bottom: 15px;
+        }
+
+        .section ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .section ul li::before {
+            content: "-> ";
+        }
+
+
+        .footer {
+            border-top: 1px solid #30363d;
+            padding-top: 20px;
+            text-align: center;
+            color: #8b949e;
+        }
+
+
+        .nf-md-email:before {
+        margin: 10px;
+        }
+        .nf-dev-linkedin:before {
+        margin: 10px;
+        }
+        .nf-cod-github::before {
+            margin: 10px;
+        }
+
+        #easter-egg-gif {
+            display: none; /* Hide the GIF initially */
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        /* Default cursor */
+body {
+    cursor: url('./css/cursor/d1.png'), auto;
+}
+
+/* Custom cursor usage */
+.button {
+    cursor: url('./css/cursor/c1.png'), pointer;
+}
+
+.link {
+    cursor: url('./css/cursor/c1.png'), pointer;
+}
+
+.text-area {
+    cursor: url('./css/cursor/c1.png'), text;
+}
+
+/* Modal Background */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed;
+  z-index: 9999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background-color: rgba(0, 0, 0, 0.8); /* Dark background */
+}
+
+/* Modal Content Box */
+.modal-content {
+  position: relative;
+  margin: 5% auto;
+  width: 80%;
+  height: 90%;
+  background-color: #1b1d1f;
+  border-radius: 8px;
+  box-shadow: 0 0 15px rgba(240, 136, 62, 0.5);
+}
+
+/* PDF Frame */
+.modal-pdf {
+  width: 100%;
+  height: 100%;
+  border: none;
+  border-radius: 8px;
+}
+
+/* Close Button */
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  color: #fff;
+  font-size: 28px;
+  cursor: pointer;
+}
+
+/* View Button */
+.view-btn {
+  display: inline-block;
+  margin-left: 43%;
+  background-color: #f0883e;
+  color: #1b1d1f;
+  font-weight: bold;
+  padding: 10px 20px;
+  border-radius: 6px;
+  text-decoration: none;
+  margin-bottom: 20px;
+  transition: background 0.3s ease;
+}
+
+.view-btn:hover {
+  background-color: #c46e20;
+  color: #fff;
+}
+
+
+    </style>
+</head>
+
+
+
+
+<div class="parallax-header">
+    <div class="logo">
+        <img class="logo-image" src="./images/logo.png" alt="logo1">
+        <a href="./images/logo.png" class="logo"> </a>
+    </div>
+
+    <div>
+    <!-- Navigation links -->
+    <nav class="nav-links" id="navLinks">
+        <a style="color: #f0883e;"class="logon" href="#about">Home</a>
+        <a href="#projects">Resume</a>
+        <a href="#skills">Projects</a>
+        <a href="#contact">Contact</a>
+    </nav>
+    </div>
+    <!-- Hamburger menu icon -->
+    <div class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+
+</div>
+
+
+
+
+
+    <div class="tagline-container">
+        <h1> Resume </h1>
+        <div>
+            <h1 style="color: #f0883e;">
+</h1>
+            <p style="text-align: center;"></p>
+        </div>
+    <a href="index.html">
+        <img id="egggif" src="./images/gif.gif" style="display:none; width:300px; height:auto;">
+    </a>
+        <p> </p>
+    </div>
+    
+    
+
+
+
+<body>
+
+<!-- Trigger Button -->
+<a href="#" id="openResume" class="view-btn"> View Resume</a>
+
+<!-- PDF Modal -->
+<div id="pdfModal" class="modal">
+  <div class="modal-content">
+    <span id="closeModal" class="close-btn">&times;</span>
+    <iframe src="nck_resume.pdf" class="modal-pdf" title="Resume PDF"></iframe>
+  </div>
+</div>
+
+
+<div class="footer">
+    <p style="
+    border-bottom-width: 20px;
+    padding-bottom: 20px;
+">© 2025 Navadeep. Built with love and gears.🛠️</p>
+ </div >
+
+ <script>
+    // Hamburger menu functionality
+    const hamburger = document.getElementById('hamburger');
+    const navLinks = document.getElementById('navLinks');
+  
+    hamburger.addEventListener('click', () => {
+        navLinks.classList.toggle('active');
+        hamburger.classList.toggle('open');
+    });
+
+      // Easter egg functionality using Egg.js
+      var egg = new Egg("up,up,down,down,left,right,left,right,b,a", function() {
+  jQuery('#egggif').fadeIn(500, function() {
+    window.setTimeout(function() { jQuery('#egggif').hide(); }, 5000);
+  });
+}).listen();
+</script>
+
+<script>
+  const openBtn = document.getElementById('openResume');
+  const modal = document.getElementById('pdfModal');
+  const closeBtn = document.getElementById('closeModal');
+
+  openBtn.addEventListener('click', function (e) {
+    e.preventDefault();
+    modal.style.display = 'block';
+  });
+
+  closeBtn.addEventListener('click', function () {
+    modal.style.display = 'none';
+  });
+
+  window.addEventListener('click', function (e) {
+    if (e.target === modal) {
+      modal.style.display = 'none';
+    }
+  });
+</script>
+
+
+</body>
+</html>
+
+

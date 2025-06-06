@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Fonts -->
+    <link href="css/neardwebfont.css" rel="stylesheet">
+    <!-- Elements -->
+    <link href="css/styles.css" rel="stylesheet">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/egg.js/1.0/egg.min.js"></script>
+
+    
+
+
+    <title>Navadeep's Portfolio</title>
+    <style>
+
+        @font-face {
+        font-family: 'Ubuntu Mono Nerd Font';
+        src: url('fonts/UbuntuMonoNerdFont-Regular.ttf') format('truetype');
+        font-weight: normal;
+        font-style: normal;
+        }
+
+        html {
+    scroll-behavior: smooth;
+            }
+
+        body {
+            background-color: #1b1d1f;
+            /*background-color: #171b20;*/
+            color: #c9d1d9;
+            /*color: #c9d1d9;*/
+            font-family: 'Ubuntu Mono Nerd Font', monospace;
+            line-height: 1.6;
+            padding: 0px;
+            width: auto;
+            margin: 0;
+            text-align: left;
+            word-wrap: break-word;
+            font-size: 20px;
+        }
+        a {
+            color: #58a6ff;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        .ascii-art {
+            font-family: 'Ubuntu Mono Nerd Font', monospace;
+            white-space: pre-wrap;
+            color: #8b949e;
+            text-align: center;
+        }
+        .section {
+            width: 70%;
+            margin: 0 auto 30px;
+            text-align: left;
+        }
+
+        @media (max-width: 1000px) {
+            .section {
+                width: calc(92%); /* For smaller devices */
+            }
+          }
+
+
+        .section h1 {
+            color: #f0883e;
+            border-bottom: 2px solid #30363d;
+            padding-bottom: 5px;
+            margin-bottom: 15px;
+        }
+
+        .section ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .section ul li::before {
+            content: "🔧 ";
+        }
+
+
+        .footer {
+            border-top: 1px solid #30363d;
+            padding-top: 20px;
+            text-align: center;
+            color: #8b949e;
+        }
+
+
+        .nf-md-email:before {
+        margin: 10px;
+        }
+        .nf-dev-linkedin:before {
+        margin: 10px;
+        }
+        .nf-cod-github::before {
+            margin: 10px;
+        }
+
+        #easter-egg-gif {
+            display: none; /* Hide the GIF initially */
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        /* Default cursor */
+body {
+    cursor: url('./css/cursor/d1.png'), auto;
+}
+
+/* Custom cursor for specific elements */
+.button {
+    cursor: url('./css/cursor/c1.png'), pointer;
+}
+
+.link {
+    cursor: url('./css/cursor/c1.png'), pointer;
+}
+
+.text-area {
+    cursor: url('./css/cursor/c1.png'), text;
+}
+
+    </style>
+</head>
+
+
+
+
+<div class="parallax-header">
+    <div class="logo">
+        <img class="logo-image" src="./images/logo.png" alt="logo1">
+        <a href="./images/logo.png" class="logo"> </a>
+    </div>
+
+    <div>
+    <!-- Navigation links -->
+    <nav class="nav-links" id="navLinks">
+        <a style="color: #f0883e;"class="logon" href="#about">Home</a>
+        <a href="#projects">Resume</a>
+        <a href="#skills">Projects</a>
+        <a href="#contact">Contact</a>
+    </nav>
+    </div>
+    <!-- Hamburger menu icon -->
+    <div class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+
+</div>
+
+
+
+
+
+    <div class="tagline-container">
+        <h1> </h1>
+        <div>
+            <h1 style="text-align: center;">Mechanical Engineering Portfolio</h1>
+            <p style="text-align: center;">Explore the world of engineering and innovation</p>
+        </div>
+    <a href="index.html">
+        <img id="egggif" src="./images/gif.gif" style="display:none; width:300px; height:auto;">
+    </a>
+        <p> </p>
+    </div>
+    
+    
+
+
+
+<body>
+
+    <div class="section">
+
+        <h1><h1>Antweight Wedge-Flipper Combat Robot - Design and Project Report</h1></h1>
+
+        <h2>1. Introduction</h2>
+        <p>This project report details the design and development of an antweight (200g) combat robot equipped with a wedge-flipper mechanism. The robot is engineered for robowar competitions, featuring a low-profile triangular wedge for stability and an integrated flipper to topple opponents.</p>
+
+        <h2>2. Objectives</h2>
+        <ul>
+            <li>Design a compact, lightweight, and durable combat robot.</li>
+            <li>Integrate a flipping mechanism within the wedge for offensive capability.</li>
+            <li>Ensure compliance with robowar regulations, including size and weight limits.</li>
+            <li>Optimize robot control and maneuverability for effective combat performance.</li>
+        </ul>
+
+        <h2>3. Design Specifications</h2>
+        <h3>3.1 Dimensional Constraints</h3>
+        <ul>
+            <li>Maximum weight: 200g</li>
+            <li>Maximum dimensions: 15cm x 15cm x 15cm</li>
+            <li>Triangular wedge side profile for minimal height</li>
+        </ul>
+
+        <h3>3.2 Materials Used</h3>
+        <h4>Chassis and Frame:</h4>
+        <ul>
+            <li>3mm polycarbonate sheet (for wedge)</li>
+            <li>3D-printed or laser-cut acrylic frame</li>
+            <li>Lightweight aluminum strips (for reinforcement)</li>
+            <li>Screws, nuts, and zip ties for assembly</li>
+        </ul>
+
+        <h4>Electronics:</h4>
+        <ul>
+            <li>Micro gear motors (2x) with wheels</li>
+            <li>2.4 GHz RC receiver and transmitter</li>
+            <li>LiPo battery (2S, 7.4V, 300-500mAh)</li>
+            <li>Electronic Speed Controllers (ESCs) (2x)</li>
+            <li>Servo motor (high torque, metal gear) for flipper</li>
+        </ul>
+
+        <h4>Tools Required:</h4>
+        <ul>
+            <li>Soldering iron</li>
+            <li>Screwdriver set</li>
+            <li>Hot glue gun</li>
+            <li>Dremel or laser cutter (for precision cutting)</li>
+            <li>Multimeter (for testing connections)</li>
+        </ul>
+
+        <h2>4. Robot Construction</h2>
+        <h3>4.1 Designing the Robot</h3>
+        <ul>
+            <li>The side profile is a triangular wedge for minimal height.</li>
+            <li>The wedge is reinforced with polycarbonate for durability.</li>
+            <li>The flipper mechanism is powered by a servo motor and integrated into the wedge.</li>
+        </ul>
+
+        <h3>4.2 Assembling the Chassis</h3>
+        <ol>
+            <li>Cut the 3D-printed or acrylic chassis parts based on the design.</li>
+            <li>Attach the motors to the base using screws and zip ties.</li>
+            <li>Secure the wheels to the motors.</li>
+            <li>Reinforce the wedge with aluminum strips for strength.</li>
+            <li>Attach the servo motor and hinge mechanism for the flipper.</li>
+        </ol>
+
+        <h3>4.3 Wiring and Electronics</h3>
+        <ol>
+            <li>Connect the ESCs to the motors and battery.</li>
+            <li>Connect the servo motor to the RC receiver.</li>
+            <li>Route the wiring properly and secure it using zip ties.</li>
+            <li>Test motor control and flipper actuation using the RC transmitter.</li>
+        </ol>
+
+        <h2>5. Testing and Optimization</h2>
+        <ol>
+            <li>Secure all components within the chassis.</li>
+            <li>Perform weight checks to ensure compliance with the 200g limit.</li>
+            <li>Test drive the robot in a practice arena.</li>
+            <li>Fine-tune motor speeds, flipper response, and wedge angles.</li>
+            <li>Conduct durability tests to ensure the robot withstands impacts.</li>
+        </ol>
+
+        <h2>6. Competition Strategies</h2>
+        <ul>
+            <li><strong>Aggressive Driving:</strong> Utilize speed to push opponents out of the arena.</li>
+            <li><strong>Flipping Maneuver:</strong> Position the wedge correctly to maximize flipping efficiency.</li>
+            <li><strong>Defensive Tactics:</strong> Use the wedge to absorb hits and deflect attacks.</li>
+            <li><strong>Battery Management:</strong> Ensure full charge before matches.</li>
+            <li><strong>Quick Repairs:</strong> Keep spare parts like extra wheels, servo motors, and batteries ready.</li>
+        </ul>
+
+    </div>
+
+
+<div class="footer">
+    <p style="
+    border-bottom-width: 20px;
+    padding-bottom: 20px;
+">© 2025 Navadeep. Built with love and gears.🛠️</p>
+ </div>
+
+ <script>
+    // Hamburger menu functionality
+    const hamburger = document.getElementById('hamburger');
+    const navLinks = document.getElementById('navLinks');
+  
+    hamburger.addEventListener('click', () => {
+        navLinks.classList.toggle('active');
+        hamburger.classList.toggle('open');
+    });
+
+      // Easter egg functionality using Egg.js
+      var egg = new Egg("up,up,down,down,left,right,left,right,b,a", function() {
+  jQuery('#egggif').fadeIn(500, function() {
+    window.setTimeout(function() { jQuery('#egggif').hide(); }, 5000);
+  });
+}).listen();
+</script>
+
+</body>
+</html>
+
+
