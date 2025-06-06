@@ -39,7 +39,7 @@
   height: 100%;
   padding: 5px; /* Increased padding */
   box-sizing: border-box;
-  background-color: #12171fc1;
+  background-color: #12171fd3;
   transform: rotateX(-90deg);
   transform-origin: bottom;
   transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
@@ -63,7 +63,7 @@
 .card__description {
   margin: 12px 0;
   font-size: 14px; /* Increased font size */
-  color: #777;
+  color: #e2e3e3;
   line-height: 1.6;
 }
 
