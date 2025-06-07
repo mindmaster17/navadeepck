@@ -1,0 +1,642 @@
+/* From Uiverse.io by D3OXY */ 
+.card {
+  position: relative;
+  width: 650px; /* Increased width */
+  aspect-ratio: 4/3;
+  background-color: #0d1117;
+  border-radius: 12px; /* Slightly increased border radius */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  overflow: hidden;
+  perspective: 1000px;
+  box-shadow: 0 0 0 6px #51505080; /* Adjusted box shadow */
+  transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  margin-top: 30px; /* Adjusted margin */
+}
+
+.card svg {
+  width: 52px; /* Increased size */
+  fill: #171e29;
+  transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.card__image {
+  width: 100%;
+  height: 100%;
+}
+
+.card:hover {
+  transform: scale(1.08); /* Adjusted scaling on hover */
+  box-shadow: 0 10px 20px rgba(255, 255, 255, 0.2);
+}
+
+.card__content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 5px; /* Increased padding */
+  box-sizing: border-box;
+  background-color: #12171fd3;
+  transform: rotateX(-90deg);
+  transform-origin: bottom;
+  transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.card:hover .card__content {
+  transform: rotateX(0deg);
+}
+
+.card__title {
+  margin: 0;
+  font-size: 22px; /* Increased font size */
+  color: #565656;
+  font-weight: 700;
+}
+
+.card:hover svg {
+  scale: 0;
+}
+
+.card__description {
+  margin: 12px 0;
+  font-size: 14px; /* Increased font size */
+  color: #e2e3e3;
+  line-height: 1.6;
+}
+
+.card__button {
+  padding: 18px; /* Adjusted padding */
+  border-radius: 8px;
+  background: #777;
+  border: none;
+  color: white;
+}
+
+.secondary {
+  background: transparent;
+  color: #777;
+  border: 1px solid #777;
+}
+
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 54px; /* Increased gap */
+  justify-content: space-between;
+}
+
+@media (max-width: 1000px) {
+  .card-container {
+      justify-content: space-around; /* For smaller devices */
+  }
+}
+
+.card {
+  background-color: #161b22;
+  border: 1px solid #30363d;
+  border-radius: 12px; /* Increased border radius */
+  padding: 1px; /* Adjusted padding */
+  width: calc(32% - 24px); /* Adjusted width calculation */
+  color: #c9d1d9;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s;
+}
+
+.card:hover {
+  transform: scale(1.08); /* Adjusted scaling */
+}
+
+.card__title {
+  font-size: 1.4rem; /* Increased font size */
+  font-weight: bold;
+  color: #f0883e;
+}
+
+.card__description {
+  margin: 12px 0;
+}
+
+/*Use Card as a button*/
+
+
+
+.card__button {
+  background-color: #238636;
+  color: #ffffff;
+  padding: 12px 18px; /* Adjusted padding */
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.card__button:hover {
+  background-color: #2ea043;
+}
+
+.card {
+  width: calc(40% - 5px); /* For larger screens */
+}
+
+@media (max-width: 1000px) {
+  .card {
+      width: calc(80% - 20px); /* For tablets */
+  }
+}
+
+@media (max-width: 768px) {
+  .card {
+      width: calc(70% - 20px); /* For tablets */
+  }
+}
+
+@media (max-width: 480px) {
+  .card {
+      width: 100%; /* For mobile devices */
+  }
+}
+
+.card__content {
+  width: calc(100%); /* For larger screens */
+}
+
+@media (max-width: 768px) {
+  .card__content {
+      width: calc(100%); /* For tablets */
+  }
+}
+
+@media (max-width: 480px) {
+  .card__content {
+      width: 100%; /* For mobile devices */
+  }
+}
+
+.header-image {
+  all: unset;
+  position: relative;
+  width: 1500px;
+  height: 50vh;  /* 50% of the viewport height */
+  overflow: hidden;
+}
+
+.header-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
+/*PARALLAX EFFECT */
+
+/* Parallax Header Section */
+.parallax-header {
+  position: relative;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('./zerowaste.png');  /* Replace with your image path */
+  height: 40vh;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  align-items: top;
+  
+  top: 0px;
+  justify-content: space-between;
+  flex-direction: unset;
+ 
+ 
+  color: rgb(255, 255, 255);
+  text-transform: uppercase;
+  z-index: 1000;
+  transition: all 0.3s ease;
+
+  padding-top: 25px;
+  padding-left: 25px;
+  padding-right: 25px;
+  padding-bottom: 25px;
+
+  text-align: center;
+}
+
+.parallax-header h1 {
+  font-size: 3rem;
+  margin: 0;
+}
+
+.parallax-header p {
+  font-size: 1.5rem;
+  margin: 10px 0;
+}
+
+
+/*Ascii art container*/
+
+.ascii-art-container {
+  position: relative;
+  background-image: url('/images/zerowaste.png');  /* Replace with your image path */
+  background-size: cover;
+  background-position: center;
+  padding: 20px;
+  color: rgb(20, 19, 37);
+  font-family: monospace;
+  font-size: calc();
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.8);  /* Optional: Makes text more readable */
+  
+}
+
+/* ASCII Art Content */
+.ascii-art-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-family: monospace;
+  font-size: 20px;
+  text-align: center;
+  
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.8);  /* Optional: Makes text more readable */
+}
+
+.parallax-container {
+  position: relative;
+  height: 400px;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/images/zerowaste.png');
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+}
+
+
+/* Text wrapping mechanism*/
+
+/* Section Styling */
+.wrap-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;  /* Full-screen height for centering */
+  text-align: left;
+}
+
+.wrap-section h2 {
+  font-size: 28px;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.wrap-section p {
+  font-size: 18px;
+  line-height: 1.6;
+  color: #555;
+}
+
+.wrap-section div {
+  max-width: 600px;  /* Adjust as needed */
+  padding: 20px;
+}
+
+
+/*Header Menu*/
+
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Header Styling */
+/*.header {
+  position: absolute;
+  top: 0px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 20px;
+  width: 100%;
+  padding: 15px 30px;
+  background-color: rgba(13, 17, 23, 0.501); /* Semi-transparent background 
+  backdrop-filter: blur(3px);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 1000;
+  transition: all 0.3s ease;
+}*/
+
+/* Logo Styling */
+.logo a {
+  font-size: 24px;
+  color: #f0883e;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* Navigation Links */
+
+
+.nav-links a {
+  color: #c9d1d9;
+  text-decoration: none;
+  font-size: 18px;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #f0883e;
+}
+
+
+
+
+
+
+/* Menu Styling */
+header {
+  position: relative;
+/* Replace with your image path */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: rgb(255, 255, 255);
+
+  text-align: center;
+}
+
+header a {
+  font-size: 18px;
+  color: #c9d1d9;
+  text-decoration: none; /* Remove underline */
+  margin: 0 15px;
+  text-transform: uppercase;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+header a:hover {
+  transform: scale(1.1); /* Zoom effect */
+  color: #f0883e; /* Change text color on hover */
+  text-decoration: none;
+}
+
+.ascii-art-content {
+  font-size: 28px; /* For larger screens */
+}
+
+@media (max-width: 768px) {
+  .ascii-art-content {
+      font-size: 10px; /* For tablets */
+  }
+}
+
+@media (max-width: 480px) {
+  .ascii-art-content {
+      font-size: 5px; /* For mobile devices */
+  }
+}
+
+
+/* ASCII Scaling code */
+
+pre {
+  font-family: monospace;
+  font-size: 18px;
+  white-space: pre-wrap;
+  max-width: 100%;
+  overflow-x: auto;
+}
+
+/* Scale down the font size on smaller screens */
+@media (max-width: 900px) {
+  pre {
+    font-size: 14px;
+  }
+}
+@media (max-width: 768px) {
+  pre {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 580px) {
+  pre {
+    font-size: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  pre {
+    font-size: 7px;
+  }
+}
+@media (max-width: 415px) {
+  pre {
+    font-size: 6px;
+  }
+}
+@media (max-width: 360px) {
+  pre {
+    font-size: 5px;
+  }
+}
+
+@media (max-width: 260px) {
+  pre {
+    font-size: 3px;
+  }
+}
+
+
+/*Parallax header meneu*/
+
+/* Menu Styling */
+
+
+.parallax-header a {
+  font-size: 24px;
+  color: #c9d1d9;
+  text-decoration: none; /* Remove underline */
+  margin: 0 15px;
+  text-transform: uppercase;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.parallax-header a:hover {
+  transform: scale(1.1); /* Zoom effect */
+  color: #f0883e; /* Change text color on hover */
+  text-decoration: none;
+}
+
+
+/*Tagline Styling*/
+
+
+
+.tagline {
+  all: unset;
+  text-align: center;
+
+  position: relative;
+
+  width: 100%;
+  padding: 15px 30px;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/images/zerowaste.png');
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: all 0.3s ease;
+}
+.tagline-container {
+  position: relative;
+  height: 32vh;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/images/zerowaste.png');
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  align-content: flex-start;
+  text-align: center;
+  
+}
+
+
+/* Default state: hide nav links on small screens */
+.nav-links {
+  display: flex;
+  gap: 20px;
+}
+
+@media (max-width: 768px) {
+  .nav-links {
+      display: none;
+      flex-direction: column;
+      position: absolute;
+      top: 60px;
+      right: 0;
+      background-color: #07060645;
+      width: 100%;
+      padding: 20px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  }
+
+  .nav-links.active {
+      display: flex;
+  }
+
+  .hamburger {
+      cursor: pointer;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      width: 30px;
+      height: 21px;
+  }
+
+  .hamburger span {
+      display: block;
+      height: 3px;
+      background-color: #c9d1d9;
+      border-radius: 3px;
+      transition: all 0.3s ease;
+  }
+
+  .hamburger.open span:nth-child(1) {
+      transform: translateY(9px) rotate(45deg);
+  }
+
+  .hamburger.open span:nth-child(2) {
+      opacity: 0;
+  }
+
+  .hamburger.open span:nth-child(3) {
+      transform: translateY(-9px) rotate(-45deg);
+  }
+}
+
+
+
+.parallax-header {
+  position: relative;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/images/zerowaste.png'); /* Replace with your image path */
+  height: 20vh;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* This will space out the logo and nav links */
+  padding: 25px; /* Adjust padding as needed */
+  color: rgb(255, 255, 255);
+  text-transform: uppercase;
+  z-index: 1000;
+  transition: all 0.3s ease;
+}
+
+.logo {
+  text-align: left;
+  flex: 1; /* This will allow the logo to take up space on the left */
+}
+
+.nav-links {
+  display: flex;
+  gap: 20px; /* Space between links */
+  justify-content: flex-end; /* Aligns the nav links to the right */
+  flex: 1; /* This will allow the nav links to take up space on the right */
+}
+
+/* Ensure the hamburger menu is also aligned properly */
+.hamburger {
+  cursor: pointer;
+  display: none; /* Hide by default, show on smaller screens */
+}
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+  .nav-links {
+      display: none; /* Hide nav links by default */
+      flex-direction: column;
+      position: absolute;
+      top: 60px;
+      right: 0;
+      background-color: #121414;
+      width: 100%;
+      padding: 20px;
+      box-shadow: 0 4px 12px rgba(22, 24, 24, 0.704);
+  }
+
+  .nav-links.active {
+      display: flex; /* Show nav links when active */
+  }
+
+  .hamburger {
+      display: flex; /* Show hamburger menu on smaller screens */
+      flex-direction: column;
+      justify-content: space-between;
+      width: 30px;
+      height: 21px;
+  }
+}
+
+.logo-image {
+  height: 100px; /* Adjust the height as needed */
+  margin-right: 10px; /* Space between the logo and the text */
+}
+.logo {
+  display: flex; /* Use flexbox to align items */
+  align-items: center; /* Center items vertically */
+}
+
+
+.logon {
+  all: unset;
+  font-size: 24px;
+  color: #f0883e;
+  text-decoration: none;
+  font-weight: bold;
+ 
+}
