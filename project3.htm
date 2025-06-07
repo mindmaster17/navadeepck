@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Fonts -->
+    <link href="css/neardwebfont.css" rel="stylesheet">
+    <!-- Elements -->
+    <link href="css/styles.css" rel="stylesheet">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/egg.js/1.0/egg.min.js"></script>
+
+    
+
+
+    <title>Navadeep's Portfolio</title>
+    <style>
+
+        @font-face {
+        font-family: 'Ubuntu Mono Nerd Font';
+        src: url('fonts/UbuntuMonoNerdFont-Regular.ttf') format('truetype');
+        font-weight: normal;
+        font-style: normal;
+        }
+
+        html {
+    scroll-behavior: smooth;
+            }
+
+        body {
+            background-color: #1b1d1f;
+            /*background-color: #171b20;*/
+            color: #c9d1d9;
+            /*color: #c9d1d9;*/
+            font-family: 'Ubuntu Mono Nerd Font', monospace;
+            line-height: 1.6;
+            padding: 0px;
+            width: auto;
+            margin: 0;
+            text-align: left;
+            word-wrap: break-word;
+            font-size: 20px;
+        }
+        a {
+            color: #58a6ff;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        .ascii-art {
+            font-family: 'Ubuntu Mono Nerd Font', monospace;
+            white-space: pre-wrap;
+            color: #8b949e;
+            text-align: center;
+        }
+        .section {
+            width: 70%;
+            margin: 0 auto 30px;
+            text-align: left;
+            text-spacing-trim: 23px;
+        }
+
+        @media (max-width: 1000px) {
+            .section {
+                width: calc(92%); /* For smaller devices */
+            }
+          }
+
+
+        .section h1 {
+            color: #f0883e;
+            border-bottom: 2px solid #30363d;
+            padding-bottom: 5px;
+            margin-bottom: 15px;
+        }
+
+        .section ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .section ul li::before {
+            content: "-> ";
+        }
+
+
+        .footer {
+            border-top: 1px solid #30363d;
+            padding-top: 20px;
+            text-align: center;
+            color: #8b949e;
+        }
+
+
+        .nf-md-email:before {
+        margin: 10px;
+        }
+        .nf-dev-linkedin:before {
+        margin: 10px;
+        }
+        .nf-cod-github::before {
+            margin: 10px;
+        }
+
+        #easter-egg-gif {
+            display: none; /* Hide the GIF initially */
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        
+
+        /* Default cursor */
+body {
+    cursor: url('./css/cursor/c1.png'), auto;
+}
+
+/* Custom cursor usage */
+.button {
+    cursor: url('./css/cursor/c1.png'), pointer;
+}
+
+.link {
+    cursor: url('./css/cursor/c1.png'), pointer;
+}
+
+.text-area {
+    cursor: url('./css/cursor/c1.png'), text;
+}
+
+
+.image-container {
+  width: 100%;
+  height: 60vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.image-container img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1rem;
+  margin: 2rem 0;
+}
+
+.gallery-img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+  box-shadow: 0 2px 8px rgba(255, 255, 255, 0.08);
+}
+
+.gallery-img:hover {
+  transform: scale(1.02);
+}
+
+/* Lightbox styling */
+.lightbox {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(10, 10, 10, 0.85);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.lightbox img {
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+}
+
+
+    </style>
+</head>
+
+
+
+
+<div class="parallax-header">
+    <div class="logo">
+        <img class="logo-image" src="./images/logo.png" alt="logo1">
+        <a href="./images/logo.png" class="logo"> </a>
+    </div>
+
+    <div>
+    <!-- Navigation links -->
+    <nav class="nav-links" id="navLinks">
+        <a style="color: #f0883e;"class="logon" href="index.html">Home</a>
+        <a href="#resume">Resume</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+    </nav>
+    </div>
+    <!-- Hamburger menu icon -->
+    <div class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+
+</div>
+
+
+
+
+
+    <div class="tagline-container">
+        <h1> </h1>
+        <div>
+            <h1 style="color: #f0883e;">
+</h1>
+            <p style="text-align: center;"></p>
+        </div>
+    <a href="index.html">
+        <img id="egggif" src="./images/gif.gif" style="display:none; width:300px; height:auto;">
+    </a>
+        <p> </p>
+    </div>
+    
+    
+ <!-- content box -->
+
+
+<body>
+
+  <div class="section">
+
+    <h1><strong>Zero Waste GECT: Sustainable Campus Waste Management</strong></h1>
+
+    <div class="badge">
+        <img src="https://img.shields.io/badge/%F0%9F%8C%B1Sustainability%20Initiative-1e1e1e?style=for-the-badge&logo=leaflet&logoColor=green" alt="Sustainability Badge">
+    </div>
+
+    <div class="image-container">
+        <img src="images/zerowaste-banner.jpg" alt="Zero Waste GECT Project Banner">
+    </div>
+
+    <p>
+        <strong>Zero Waste GECT</strong> is a student-led initiative to make <strong>GEC Thrissur</strong> a model for sustainable waste management. The goal is to minimize landfill contributions by reducing, reusing, and recycling waste generated on campus, ultimately achieving a **zero-waste environment**.
+    </p>
+
+    <h2>Project Overview</h2>
+    <p>
+        This project involves the implementation of an integrated waste segregation, tracking, and awareness system. By combining technology with behavioral change campaigns, the project encourages students and staff to adopt environmentally responsible habits.
+    </p>
+
+    <ul>
+        <li><strong>Smart Waste Bins</strong> with sensor-based monitoring</li>
+        <li><strong>Dry/Wet/Plastic segregation</strong> at source</li>
+        <li><strong>Composting units</strong> for biodegradable waste</li>
+        <li><strong>Recyclable sorting stations</strong> for paper, metal, and e-waste</li>
+        <li><strong>Awareness drives</strong> and workshops for community engagement</li>
+    </ul>
+
+    <div class="image-container">
+        <img src="images/bin.jpg" alt="Waste Segregation Bins on Campus">
+    </div>
+
+    <div class="gallery">
+  <img src="images/bin1.jpg" alt="Bin Setup 1" class="gallery-img" onclick="openLightbox(this)">
+  <img src="images/bin2.jpg" alt="Bin Setup 2" class="gallery-img" onclick="openLightbox(this)">
+  <img src="images/bin3.jpg" alt="Bin Setup 3" class="gallery-img" onclick="openLightbox(this)">
+  <img src="images/bin4.jpg" alt="Bin Setup 4" class="gallery-img" onclick="openLightbox(this)">
+</div>
+
+<!-- Lightbox Viewer -->
+<div id="lightbox" class="lightbox" onclick="closeLightbox()">
+  <img id="lightbox-img" src="" alt="Preview">
+</div>
+
+    <h2>Key Features</h2>
+    <ul>
+        <li><strong>IoT-enabled bins</strong>: Real-time fill level tracking via sensors and dashboard</li>
+        <li><strong>Segregation at source</strong>: Color-coded bins and informative signage</li>
+        <li><strong>Closed-loop waste handling</strong>: Organic waste used for composting, recyclables sent to local centers</li>
+        <li><strong>Student and club involvement</strong>: Volunteer teams help operate and monitor the system</li>
+    </ul>
+
+    <h2>Technology Stack</h2>
+    <h3>Hardware</h3>
+    <ul>
+        <li>Ultrasonic sensors (e.g., HC-SR04)</li>
+        <li>ESP32 microcontrollers</li>
+        <li>Solar-powered bin stations</li>
+    </ul>
+
+    <h3>Software</h3>
+    <ul>
+        <li>Google AppScript + Google Sheets for data logging</li>
+        <li>Mobile-responsive dashboard for tracking bin levels</li>
+        <li>QR-based student interaction system for reporting and incentives</li>
+    </ul>
+
+    <div class="image-container">
+        <img src="images/dashboard-preview.jpg" alt="Live Waste Monitoring Dashboard">
+    </div>
+
+    <h2>Why This Project Matters</h2>
+    <p>
+        With the rise in environmental concerns and the need for sustainable solutions, <strong>Zero Waste GECT</strong> serves as a model for educational institutions aiming to create a lasting environmental impact. It’s more than just waste management – it's a community-driven sustainability mission.
+    </p>
+
+    <h2>Get Involved</h2>
+    <p>
+        Want to be a part of the green revolution? We welcome all students passionate about the environment, whether you're into electronics, software, logistics, or community outreach.
+    </p>
+
+    <h3>Contact Us</h3>
+    <p><strong>Email</strong>: <a href="mailto:navadeepck@gmail.com">navadeepck@gmail.com</a></p>
+    <p><strong>GitHub</strong>: <a href="https://github.com/mindmaster17" target="_blank">mindmaster17</a></p>
+
+    <p><strong>Together, let’s build a cleaner, greener campus. 🌿♻️</strong></p>
+
+</div>
+
+ <!-- content box -->
+
+<div class="footer">
+    <p style="
+    border-bottom-width: 20px;
+    padding-bottom: 20px;
+">© 2025 Navadeep. Built with love and gears.🛠️</p>
+ </div >
+
+ <script>
+    // Hamburger menu functionality
+    const hamburger = document.getElementById('hamburger');
+    const navLinks = document.getElementById('navLinks');
+  
+    hamburger.addEventListener('click', () => {
+        navLinks.classList.toggle('active');
+        hamburger.classList.toggle('open');
+    });
+
+      // Easter egg functionality using Egg.js
+      var egg = new Egg("up,up,down,down,left,right,left,right,b,a", function() {
+  jQuery('#egggif').fadeIn(500, function() {
+    window.setTimeout(function() { jQuery('#egggif').hide(); }, 5000);
+  });
+}).listen();
+</script>
+
+<script>
+    // Script for image box
+  function openLightbox(img) {
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightbox-img');
+    lightboxImg.src = img.src;
+    lightbox.style.display = 'flex';
+  }
+
+  function closeLightbox() {
+    document.getElementById('lightbox').style.display = 'none';
+  }
+</script>
+
+
+</body>
+</html>
+
+
