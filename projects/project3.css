@@ -237,7 +237,7 @@
 
 .ascii-art-container {
   position: relative;
-  background-image: url('/images/zerowaste.png');  /* Replace with your image path */
+  background-image: url('./images/zerowaste.png');  /* Replace with your image path */
   background-size: cover;
   background-position: center;
   padding: 20px;
@@ -265,7 +265,7 @@
 .parallax-container {
   position: relative;
   height: 400px;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/images/zerowaste.png');
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('./images/zerowaste.png');
   background-attachment: fixed;
   background-size: cover;
   background-position: center;
@@ -485,7 +485,7 @@ pre {
 
   width: 100%;
   padding: 15px 30px;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/images/zerowaste.png');
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('./images/zerowaste.png');
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -494,7 +494,7 @@ pre {
 .tagline-container {
   position: relative;
   height: 32vh;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/images/zerowaste.png');
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('./images/zerowaste.png');
   background-attachment: fixed;
   background-size: cover;
   background-position: center;
@@ -561,7 +561,7 @@ pre {
 
 .parallax-header {
   position: relative;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/images/zerowaste.png'); /* Replace with your image path */
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('./images/zerowaste.png'); /* Replace with your image path */
   height: 20vh;
   background-attachment: fixed;
   background-position: center;
